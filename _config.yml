@@ -1,0 +1,8 @@
+title: cloudflare-terraform-infra
+description: Terraform infrastructure templates for our CloudFlare instances.
+show_downloads: true
+theme: jekyll-theme-midnight
+
+plugins:
+  - jemoji
+  - jekyll-sitemap
