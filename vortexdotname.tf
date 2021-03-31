@@ -1,5 +1,7 @@
-locals {
-  zone_id = "af76b9090f6e819df8e36ba0d850b2fd"
+data "cloudflare_zones" "vortexdotname" {
+  filter {
+    name = "vortex.name"
+  }
 }
 
 # zone
@@ -12,7 +14,7 @@ resource "cloudflare_zone" "vortex_name" {
 
 # page_rule
 resource "cloudflare_page_rule" "vortexdotname_https_rewrite" {
-  zone_id  = local.zone_id
+  zone_id  = data.cloudflare_zones.vortexdotname.zones[0].id
   target   = "http://*.vortex.name/*"
   priority = 1
   status   = "active"
@@ -23,7 +25,7 @@ resource "cloudflare_page_rule" "vortexdotname_https_rewrite" {
 
 # record
 resource "cloudflare_record" "vortexdotname_A_vortex_name_github1" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
   type    = "A"
   ttl     = "1"
@@ -32,7 +34,7 @@ resource "cloudflare_record" "vortexdotname_A_vortex_name_github1" {
 }
 
 resource "cloudflare_record" "vortexdotname_A_vortex_name_github2" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
   type    = "A"
   ttl     = "1"
@@ -41,7 +43,7 @@ resource "cloudflare_record" "vortexdotname_A_vortex_name_github2" {
 }
 
 resource "cloudflare_record" "vortexdotname_A_vortex_name_github3" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
   type    = "A"
   ttl     = "1"
@@ -50,7 +52,7 @@ resource "cloudflare_record" "vortexdotname_A_vortex_name_github3" {
 }
 
 resource "cloudflare_record" "vortexdotname_A_vortex_name_github4" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
   type    = "A"
   ttl     = "1"
@@ -59,7 +61,7 @@ resource "cloudflare_record" "vortexdotname_A_vortex_name_github4" {
 }
 
 resource "cloudflare_record" "vortexdotname_AAAA_connect-with_vortex_name" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "connect-with"
   type    = "AAAA"
   ttl     = "1"
@@ -68,7 +70,7 @@ resource "cloudflare_record" "vortexdotname_AAAA_connect-with_vortex_name" {
 }
 
 resource "cloudflare_record" "vortexdotname_AAAA_workers_vortex_name" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "workers"
   type    = "AAAA"
   ttl     = "1"
@@ -77,7 +79,7 @@ resource "cloudflare_record" "vortexdotname_AAAA_workers_vortex_name" {
 }
 
 resource "cloudflare_record" "vortexdotname_CNAME_dotfiles_vortex_name" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "dotfiles"
   type    = "CNAME"
   ttl     = "1"
@@ -86,7 +88,7 @@ resource "cloudflare_record" "vortexdotname_CNAME_dotfiles_vortex_name" {
 }
 
 resource "cloudflare_record" "vortexdotname_CNAME_tedvortex-xyz_vortex_name" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "tedvortex-xyz"
   type    = "CNAME"
   ttl     = "1"
@@ -95,7 +97,7 @@ resource "cloudflare_record" "vortexdotname_CNAME_tedvortex-xyz_vortex_name" {
 }
 
 resource "cloudflare_record" "vortexdotname_CNAME_terraform_vortex_name" {
-  zone_id = local.zone_id
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "terraform"
   type    = "CNAME"
   ttl     = "1"
