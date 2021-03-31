@@ -80,8 +80,8 @@ The simplest way to do that is to dry-run as follows:
 # see a list of all commands
 make
 
-# write some code
-make format
+# setup local environment
+make init
 
 # plan infrastructure changes
 make plan
