@@ -3,9 +3,9 @@ terraform {
 
   backend "s3" {
     region         = "eu-central-1"
-    bucket         = "zerovortex-production-terraform-state"
+    bucket         = "zerovortex-prod-terraform-state"
     key            = "terraform.tfstate"
-    dynamodb_table = "zerovortex-production-terraform-state-lock"
+    dynamodb_table = "zerovortex-prod-terraform-state-lock"
     profile        = ""
     role_arn       = ""
     encrypt        = "true"
