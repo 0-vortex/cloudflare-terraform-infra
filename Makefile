@@ -38,7 +38,7 @@ destroy: ## runs terraform destroy
 clean: ## cleans up any terraform temporary files
 > rm -rf .terraform
 > rm -rf terraform.tfstate*
-> rm terra.plan
+> rm -f terra.plan
 .PHONY: clean
 
 help:
