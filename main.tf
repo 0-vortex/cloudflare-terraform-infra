@@ -18,12 +18,12 @@ module "terraform_state_backend" {
   terraform_backend_config_file_name = "backend.tf"
   force_destroy                      = false
 
-  block_public_acls = true
-  block_public_policy = true
+  block_public_acls             = true
+  block_public_policy           = true
   enable_point_in_time_recovery = true
-  enable_public_access_block = true
+  enable_public_access_block    = true
   enable_server_side_encryption = true
-  prevent_unencrypted_uploads = true
+  prevent_unencrypted_uploads   = true
 }
 
 provider "cloudflare" {

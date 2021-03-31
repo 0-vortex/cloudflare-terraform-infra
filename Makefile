@@ -28,7 +28,7 @@ validate: ## runs terraform validate
 .PHONY: validate
 
 format: ## runs terraform fmt
-> terraform fmt -check=true -write=false -diff=true
+> terraform fmt -diff=true
 .PHONY: format
 
 destroy: ## runs terraform destroy
