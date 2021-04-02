@@ -104,3 +104,12 @@ resource "cloudflare_record" "vortexdotname_CNAME_terraform_vortex_name" {
   proxied = "true"
   value   = "0-vortex.github.io"
 }
+
+resource "cloudflare_record" "vortexdotname_CNAME_dark-elise_vortex_name" {
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
+  name    = "derk-elise"
+  type    = "CNAME"
+  ttl     = "1"
+  proxied = "true"
+  value   = "0-vortex.github.io"
+}
