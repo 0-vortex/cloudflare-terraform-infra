@@ -107,7 +107,7 @@ resource "cloudflare_record" "vortexdotname_CNAME_terraform_vortex_name" {
 
 resource "cloudflare_record" "vortexdotname_CNAME_dark-elise_vortex_name" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
-  name    = "derk-elise"
+  name    = "dark-elise"
   type    = "CNAME"
   ttl     = "1"
   proxied = "true"
