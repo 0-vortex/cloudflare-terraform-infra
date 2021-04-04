@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  tflint:
+    image: wata727/tflint
+    container_name: "cti-tflint"
+    command: /src
+    volumes:
+      - .:/src
+  tfsec:
+    image: liamg/tfsec
+    container_name: "cti-tfsec"
+    command: /src
+    volumes:
+      - .:/src
+  tfscan:
+    image: accurics/terrascan
+    container_name: "cti-tfscan"
+    command: scan -d /src
+    volumes:
+      - .:/src
