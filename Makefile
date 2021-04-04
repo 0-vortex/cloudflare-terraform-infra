@@ -41,5 +41,21 @@ clean: ## cleans up any terraform temporary files
 > rm -f terra.plan
 .PHONY: clean
 
+scan: ## runs docker compose up
+> docker compose up
+.PHONY: scan
+
+tflint: ## runs docker:wata727/tflint
+> docker compose run tflint
+.PHONY: tflint
+
+tfsec: ## runs docker:liamg/tfsec
+> docker compose run tfsec
+.PHONY: tfsec
+
+tfscan: ## runs docker:accurics/terrascan
+> docker compose run tfscan
+.PHONY: tfscan
+
 help:
 > @grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'

@@ -2,6 +2,7 @@
 
 [![docs](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml)
  [![terraform](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml)
+ [![CodeFactor](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra/badge)](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra)
 
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
  [![License](https://img.shields.io/github/license/0-vortex/workers-lastfm-shields)](./LICENSE)
@@ -19,11 +20,11 @@ Modules used:
 
 Deployments and resources:
 - [vortex.name](https://vortex.name) with HCL [vortexdotname.tf](./vortexdotname.tf)
-- [tiamat.tech](https://tiamat.tech) with HCL [tiamatdottech](./tiamatdottech.tf)
+- [tiamat.tech](https://tiamat.tech) with HCL [tiamatdottech.tf](./tiamatdottech.tf)
 
 ## Folder structure
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+A quick look at the top-level files and directories you'll see in a HCL project.
 
 ```
 ├──── aws-terraform-infra
@@ -34,6 +35,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 │  ├── .terraform.lock.hcl
 │  ├── _config.yml
 │  ├── backend.tf
+│  ├── compose.yaml
 │  ├── LICENSE
 │  ├── main.tf
 │  ├── Makefile
@@ -54,7 +56,7 @@ git clone git@github.com:0-vortex/cloudflare-terraform-infra.git
 
 ## Requirements
 
-This repository requires `terraform>=v0.14` and `gnumake>=3.82` to be installed.
+This repository requires `terraform>=v0.14`, `docker>=20` and `gnumake>=3.82` to be installed.
 
 ## How to use
 
@@ -85,5 +87,22 @@ make init
 
 # plan infrastructure changes
 make plan
-
 ```
+
+To scan for Infrastructure-as-Code compliance:
+
+```shell
+# run all the scans
+make scan
+
+# run scans individually
+make tflint
+make tfsec
+make tfscan
+```
+
+## License
+
+This library is released under BSD-3 license clause.
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra?ref=badge_large)
