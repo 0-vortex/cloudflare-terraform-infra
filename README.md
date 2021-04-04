@@ -1,10 +1,14 @@
 # cloudflare-terraform-infra
 
 [![docs](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra?ref=badge_shield)
  [![terraform](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml)
 
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
  [![License](https://img.shields.io/github/license/0-vortex/workers-lastfm-shields)](./LICENSE)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2F0-vortex%2Fcloudflare-terraform-infra?ref=badge_large)
 
 ## Overview
 
