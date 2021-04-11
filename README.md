@@ -1,11 +1,13 @@
 # cloudflare-terraform-infra
 
-[![docs](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml)
- [![terraform](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml)
- [![CodeFactor](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra/badge)](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra)
-
 [![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
  [![License](https://img.shields.io/github/license/0-vortex/workers-lastfm-shields)](./LICENSE)
+ [![CodeFactor](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra/badge)](https://www.codefactor.io/repository/github/0-vortex/cloudflare-terraform-infra)
+
+[![docs](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/docs.yml)
+ [![terraform](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml/badge.svg)](https://github.com/0-vortex/cloudflare-terraform-infra/actions/workflows/terraform.yml)
+
+![cloudflare-terraform-infra Actions](https://api.meercode.io/badge/0-vortex/cloudflare-terraform-infra?type=ci-count&lastDay=31)
 
 ## Overview
 
