@@ -24,40 +24,13 @@ resource "cloudflare_page_rule" "vortexdotname_https_rewrite" {
 }
 
 # record
-resource "cloudflare_record" "vortexdotname_A_vortex_name_github1" {
+resource "cloudflare_record" "vortexdotname_A_vortex_name_polywork" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
   type    = "A"
   ttl     = "1"
   proxied = "true"
-  value   = "185.199.111.153"
-}
-
-resource "cloudflare_record" "vortexdotname_A_vortex_name_github2" {
-  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
-  name    = "vortex.name"
-  type    = "A"
-  ttl     = "1"
-  proxied = "true"
-  value   = "185.199.110.153"
-}
-
-resource "cloudflare_record" "vortexdotname_A_vortex_name_github3" {
-  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
-  name    = "vortex.name"
-  type    = "A"
-  ttl     = "1"
-  proxied = "true"
-  value   = "185.199.109.153"
-}
-
-resource "cloudflare_record" "vortexdotname_A_vortex_name_github4" {
-  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
-  name    = "vortex.name"
-  type    = "A"
-  ttl     = "1"
-  proxied = "true"
-  value   = "185.199.108.153"
+  value   = "vascular-sawfish-x3yogvemepww6hq611chcm1b.herokudns.com"
 }
 
 resource "cloudflare_record" "vortexdotname_AAAA_connect-with_vortex_name" {
