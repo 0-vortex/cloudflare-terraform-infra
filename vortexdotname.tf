@@ -96,10 +96,10 @@ resource "cloudflare_record" "vortexdotname_CNAME_dark-elise_vortex_name" {
   value   = "0-vortex.github.io"
 }
 
-resource "cloudflare_record" "vortexdotname_CNAME_google-site-verification_vortex_name" {
+resource "cloudflare_record" "vortexdotname_TXT_google-site-verification_vortex_name" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
-  type    = "CNAME"
+  type    = "TXT"
   ttl     = "1"
   proxied = "false"
   value   = "google-site-verification=o5fTXqHt2wcT1UItoGn5vLgQf8zzO4C342uNtclqhiM"
