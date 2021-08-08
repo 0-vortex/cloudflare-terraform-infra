@@ -24,12 +24,12 @@ resource "cloudflare_page_rule" "vortexdotname_https_rewrite" {
 }
 
 # record
-resource "cloudflare_record" "vortexdotname_A_vortex_name_polywork" {
+resource "cloudflare_record" "vortexdotname_CNAME_polywork_vortex_name" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
-  type    = "A"
+  type    = "CNAME"
   ttl     = "1"
-  proxied = "true"
+  proxied = "false"
   value   = "vascular-sawfish-x3yogvemepww6hq611chcm1b.herokudns.com"
 }
 
