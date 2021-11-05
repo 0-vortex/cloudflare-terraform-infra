@@ -69,6 +69,15 @@ resource "cloudflare_record" "vortexdotname_CNAME_open-sauced-explorer-test_vort
   value   = "0-vortex.github.io"
 }
 
+resource "cloudflare_record" "vortexdotname_CNAME_open-sauced-docs-test_vortex_name" {
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
+  name    = "open-sauced-docs-test"
+  type    = "CNAME"
+  ttl     = "1"
+  proxied = "true"
+  value   = "0-vortex.github.io"
+}
+
 resource "cloudflare_record" "vortexdotname_CNAME_tedvortex-xyz_vortex_name" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "tedvortex-xyz"
