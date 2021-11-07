@@ -105,6 +105,15 @@ resource "cloudflare_record" "vortexdotname_CNAME_dark-elise_vortex_name" {
   value   = "0-vortex.github.io"
 }
 
+resource "cloudflare_record" "vortexdotname_CNAME_polywork-handbook_vortex_name" {
+  zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
+  name    = "polywork"
+  type    = "CNAME"
+  ttl     = "1"
+  proxied = "true"
+  value   = "0-vortex.github.io"
+}
+
 resource "cloudflare_record" "vortexdotname_TXT_google-site-verification_vortex_name" {
   zone_id = data.cloudflare_zones.vortexdotname.zones[0].id
   name    = "vortex.name"
